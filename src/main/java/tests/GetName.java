@@ -18,7 +18,7 @@ public class GetName{
 		RestAssured.baseURI = "http://localhost:9002/api";
 		Response response = RestAssured.get("/Babu");
 		
-		Assert.assertEquals(true, response.getStatusCode() == 201);
+		Assert.assertEquals(true, response.getStatusCode() == 200);
 		Assert.assertEquals(true, response.getContentType().contains("text"));
 		
 		
