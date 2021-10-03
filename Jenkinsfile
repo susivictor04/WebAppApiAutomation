@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Dev Code Pull') {
       steps {
-        git(url: 'https://github.com/TestLeafInc/WebApp.git', branch: 'main')
+        git(url: 'https://github.com/TestLeafInc/WebApp.git', branch: 'master')
       }
     }
 
@@ -32,14 +32,14 @@ pipeline {
 
         stage('API Test') {
           steps {
-            git(url: 'https://github.com/susivictor04/WebAppApiAutomation.git', branch: 'main')
+            git(url: 'https://github.com/susivictor04/WebAppApiAutomation.git', branch: 'master')
             bat 'mvn test'
           }
         }
 
         stage('UI Automation test') {
           steps {
-            git(url: 'https://github.com/TestLeafInc/WebAppUiAutomation.git', branch: 'main')
+            git(url: 'https://github.com/TestLeafInc/WebAppUiAutomation.git', branch: 'master')
             bat 'mvn test'
           }
         }
