@@ -10,6 +10,7 @@ pipeline {
     stage('Dev Maven Build') {
       steps {
         tool(name: 'MAVEN_HOME', type: 'maven')
+        tool(name: 'java', type: 'jdk')
         bat 'start /min stopApp.bat'
         bat 'mvn install'
         bat 'set JENKINS_NODE_COOKIE=dontkillMe && start /min startApp.bat'
