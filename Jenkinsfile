@@ -39,7 +39,7 @@ pipeline {
 
         stage('UI Automation test') {
           steps {
-            git(url: 'https://github.com/TestLeafInc/WebAppUiAutomation.git', branch: 'master')
+            git(url: 'https://github.com/susivictor04/WebAppUiAutomation.git', branch: 'master')
             sleep 10
             bat 'mvn test'
           }
